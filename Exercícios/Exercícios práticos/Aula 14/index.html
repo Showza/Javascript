@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="inicio">Início:</label>
+            <input type="number" name="inicio" id="inicio"><br>
+            <label for="fim">Fim:</label>
+            <input type="number" name="fim" id="fim"><br>
+            <label for="passo">Passo:</label>
+            <input type="number" name="passo" id="passo">
+        </div>
+        <button type="submit" id="botao" onclick="contar()">Contar</button>
+        <p id="res"></p>
+    </section>
+
+    <footer>
+        <p>© Site criado por <a href="https://github.com/Showza" target="_blank"><strong>Christian Souza</strong></a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
