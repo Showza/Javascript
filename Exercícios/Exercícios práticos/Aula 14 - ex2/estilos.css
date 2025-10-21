@@ -22,6 +22,10 @@ section{
     box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.438);
 }
 
+select{
+    width: 200px;
+}
+
 div{
     padding: 5px;
 }

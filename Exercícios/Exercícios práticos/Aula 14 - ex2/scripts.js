@@ -1,16 +1,19 @@
-function tabuada(){
+function tabuada() {
     let numero = document.getElementById('txtn')
     let n = Number(numero.value)
-    let tabuada = document.getElementById('seltab')
+    let tab = document.getElementById('seltab')
 
-    if (n <= 0){
-        window.alert('Erro! O número precisa ser maior ou igual a 1.')
+    if (numero.value.length == 0) {
+        window.alert('Erro! Insira um número')
     } else {
         let c = 1
-        do{
-            let tab = n * c
-            tabuada.innerHTML += `${tab}`
+        tab.innerHTML = ''
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
             c++
-        } while (c < 10)
+        }
     }
 }
