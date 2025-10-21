@@ -1,14 +1,19 @@
-let inicio = document.body.getElementById('inicio')
-let fim = document.getElementById('fim')
-let passo = document.getElementById('passo')
-let res = document.getElementById('res')
+function contar() {
+    let ini = document.getElementById('inicio')
+    let fim = document.getElementById('fim')
+    let passo = document.getElementById('passo')
+    let res = document.getElementById('res')
 
-let n1 = Number(inicio.value)
-let n2 = Number(fim.value)
-let n3 = Number(passo.value)
-
-function contar(){
-    window.alert('Olá')
-    res.innerHTML = `${n1}, ${n2}, ${n3}`
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert ("Erro! Faltam dados")
+    } else {
+        res.innerHTML = 'Contando:'
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        
+        for (let c = i; c <= f; c += p){
+            res.innerHTML += `${c}`
+        }
+    }
 }
-
