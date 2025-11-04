@@ -28,19 +28,24 @@ function adicionar() {
 }
 
 function finalizar(){
+    //Ordenando a lista em ordem crescente. Detalhe que é necessário inserir a function e comparar o primeiro número (a) com o segundo número (b)
     list_num.sort(function(a,b){
         return a - b;
     })
-    let soma = 0
 
+    //Realizando a soma de todos os números, fazendo isso com base no tamanho da lista. Então o FOR faz com que seja somado a "SOMA" + o número da lista começando do index 0
+    let soma = 0
     for (let c = 0; c < list_num.length; c++){
         soma += list_num[c];
     }
 
+    //Média dos valores
     let media = soma / list_num.length
-
+    //Menor número da lista pegando o primeiro número já que a lista foi organizada anteriormente
     let menor_num = list_num[0]
+    //Maior valor da lista pegando o último número da lista usando o tamanho dela -1
     let maior_num = list_num[list_num.length -1]
 
+    //Print dos resultados
     resumo.innerHTML = `Ao todo, temos ${list_num.length} números cadastrados. <br> O maior número informado foi ${maior_num}. <br> O menor número informado foi ${menor_num}. <br> Somando todos os valores, temos ${soma}.<br> A média dos valores digitados é ${media}.`
 }
